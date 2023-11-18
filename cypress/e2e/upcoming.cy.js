@@ -1,14 +1,15 @@
-let movies;
-const movieId = 497582; // Enola Holmes movie id
+let movies; // List of movies from TMDB
+let movie; //
 
-describe("The upcoming feature", () => {
+describe("Upcoming Page tests", () => {
     before(() => {
+        // Get the discover movies from TMDB and store them locally.
         cy.request(
             `https://api.themoviedb.org/3/movie/upcoming?api_key=${Cypress.env(
                 "TMDB_KEY"
             )}&language=en-US&page=1`
         )
-            .its("body")
+            .its("body") // Take the body of HTTP response from TMDB
             .then((response) => {
                 movies = response.results;
             });
@@ -17,36 +18,46 @@ describe("The upcoming feature", () => {
         cy.visit("/movies/upcoming");
     });
 
-    describe("Selecting To Watch", () => {
-        it("selected movie card shows the red icon", () => {
-            cy.get(".MuiCardHeader-root").eq(1).find("svg").should("not.exist");
-            cy.get("button[aria-label='add to watch']").eq(1).click();
-            cy.get(".MuiCardHeader-root").eq(1).find("svg");
+    describe("The Upcoming Movies page", () => {
+        it("displays the page header and 20 movies", () => {
+            cy.get("h3").contains("Upcoming Movies");
+            cy.get(".MuiCardHeader-root").should("have.length", 20);
+        });
+
+        it("displays the correct movie titles", () => {
+            cy.get(".MuiCardHeader-content").each(($card, index) => {
+                cy.wrap($card).find("p").contains(movies[index].title);
+            });
         });
     });
-
-    describe("The Must Watch page", () => {
+    describe("The Movie Details page", () => {
+        before(() => {
+            cy.request(
+                `https://api.themoviedb.org/3/movie/${
+                    movies[0].id
+                }?api_key=${Cypress.env("TMDB_KEY")}`
+            )
+                .its("body")
+                .then((movieDetails) => {
+                    movie = movieDetails;
+                });
+        });
         beforeEach(() => {
-            // Select two favourites and navigate to Favourites page
-            cy.get("button[aria-label='add to watch']").eq(1).click();
-            cy.get("button[aria-label='add to watch']").eq(3).click();
-            cy.get("button").contains("Must Watch").click();
+            cy.visit(`/movies/${movies[0].id}`);
         });
-        it("only the tagged to watch movies are listed", () => {
-            cy.get(".MuiCardHeader-content").should("have.length", 2);
-            cy.get(".MuiCardHeader-content")
-                .eq(0)
-                .find("p")
-                .contains(movies[1].title);
-            cy.get(".MuiCardHeader-content")
-                .eq(1)
-                .find("p")
-                .contains(movies[3].title);
-        });
-        it("removes to watch movies", () => {
-            cy.get("button[aria-label='remove from To Watch']").eq(0).click();
-            cy.get("button[aria-label='remove from To Watch']").eq(0).click();
-            cy.get(".MuiCardHeader-content").should("have.length", 0);
+        it(" displays the movie title, overview and genres and ", () => {
+            cy.get("h3").contains(movie.title);
+            cy.get("h3").contains("Overview");
+            cy.get("h3").next().contains(movie.overview);
+            cy.get("p")
+                .next()
+                .within(() => {
+                    const genreChips = movie.genres.map((g) => g.name);
+                    genreChips.unshift("Genres");
+                    cy.get("span").each(($card, index) => {
+                        cy.wrap($card).contains(genreChips[index]);
+                    });
+                });
         });
     });
 });
