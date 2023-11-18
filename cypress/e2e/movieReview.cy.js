@@ -1,5 +1,3 @@
-import movieReview from "../../src/components/movieReview";
-
 let movies; // List of movies from TMDB
 let movie; // one of the movies
 let reviews; // List of movie reviews from TMDB
