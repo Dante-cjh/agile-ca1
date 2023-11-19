@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {MoviesContext} from "../../contexts/moviesContext";
+import {MoviesContext} from "../../../contexts/moviesContext";
 import Avatar from '@mui/material/Avatar';
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -13,7 +13,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import CalendarIcon from "@mui/icons-material/CalendarTodayTwoTone";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import Grid from "@mui/material/Grid";
-import img from '../../images/film-poster-placeholder.png'
+import img from '../../../images/film-poster-placeholder.png'
 import PlayListAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
 
 export default function MovieCard({movie, action}) {
