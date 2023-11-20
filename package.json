@@ -27,8 +27,7 @@
     "build-storybook": "storybook build"
   },
   "eslintConfig": {
-    "extends": [
-    ]
+    "extends": []
   },
   "browserslist": {
     "production": [
