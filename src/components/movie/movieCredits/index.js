@@ -3,7 +3,7 @@ import {Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from "@m
 import {Link} from "react-router-dom";
 import img from "../../../images/film-poster-placeholder.png";
 import {useQuery} from "react-query";
-import {getMovieCredits} from "../../../src/api/tmdb-api";
+import {getMovieCredits} from "../../../api/tmdb-api";
 import Spinner from "../../spinner";
 
 const MovieCredits = ({movieId}) => {
