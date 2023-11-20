@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Assignment 1 - Agile Software Practice.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+__Name:__ ....your name .....
 
-## Available Scripts
+This repository contains the implementation of a React App, its associated Cypress tests and the GitLab CI pipeline.
 
-In the project directory, you can run:
+## React App Features.
 
-### `npm start`
+[ Provide a bullet-point list of the __new features__ you added to the React Movies app, as well as any modifications to existing features).] e.g.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
++ Feature 1
++ Feature 2
++ Feature 3
++ etc
++ etc
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Automated Tests.
 
-### `npm test`
+### Unique functionality testing (if relevant).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Briefly explain the parts of your app's  functionality that are unique and state the associated test file name.]
 
-### `npm run build`
+e.g.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+__Favourite Movie tagging__ - The user can tag movies as their favourite, and those selected are listed on a separate page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
++ cypress/e2e/favourites.cy.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+__Feature X__ - The user can ......
 
-### `npm run eject`
++ cypress/e2e/featureX.cy.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Error/Exception testing (if relevant).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[State the cases that demonstrate error and/or exception testing.]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Display the Favourite Movies page when no movies have been tagged.
+1. Submitting a Movie Review form when the user's name is blank.
+1. Other case X
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Cypress Custom commands (if relevant).
 
-## Learn More
+[ Specify the test file(s) that use a custom Cypress command(s) that you implemented.]
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+e.g.
++ cypress/e2e/filtering.cy.js
++ cypress/e2e/favourites.cy.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Code Splitting.
 
-### Code Splitting
+[Specify the pathname of each source code file that contains evidence of code splitting in your React app.]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+e.g.
++ src/index.js
++ src/pages/favouriteMoviesPage.js
++ src/components/movieCard/index.js
 
-### Analyzing the Bundle Size
+## Pull Requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[ Specify the URL of the GitHub repository that contains a record of the Pull Requests made during this assignment's code (source code or test code). If you used GitLab Merge Requests instead, then simply state this.]
 
-### Making a Progressive Web App
+## Independent learning (If relevant).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[ Briefly explain the work you did to satisfy the requirements of the Outstanding grade category, and include proof (e.g. screenshots) of its success. Also, mention the files that contain evidence of this work.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+State any other evidence of independent learning achieved while completing this assignment.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
