@@ -26,3 +26,7 @@
 Cypress.Commands.add('navigateToMovie', (castId) => {
     cy.visit(`/movies/${castId}`);
 });
+
+Cypress.Commands.add('navigateToActor', (crewId) => {
+    cy.visit(`/actors/${crewId}`);
+});
