@@ -1,10 +1,8 @@
 import React, {useState, lazy, Suspense} from "react";
 import {getMovies} from "../api/tmdb-api";
-
 const PageTemplate = lazy(() => import('../components/templatePage/templateMovieListPage'));
 import {useQuery} from 'react-query';
 import Spinner from '../components/spinner';
-
 const AddToFavoritesIcon = lazy(() => import('../components/cardIcons/addToFavorites'));
 
 const HomePage = (props) => {
