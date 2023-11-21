@@ -1,4 +1,4 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -12,7 +12,7 @@ import Select from "@mui/material/Select";
 import img from '../../../images/pexels-dziana-hasanbekava-5480827.jpg';
 import { getGenres } from "../../../api/tmdb-api";
 import { useQuery } from "react-query";
-import Spinner from '../../spinner'
+const Spinner = lazy(() => import("../../spinner"));
 
 const formControl = 
   {
