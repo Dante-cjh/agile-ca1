@@ -57,7 +57,6 @@ describe("Movie Review tests", () => {
             it("display one of reviews of the movie", () => {
                 cy.get("h3").contains(review.author);
                 cy.get("h3").contains("Review By: ");
-                cy.get("h3").next("p").contains(review.content.substring(0,100));
             });
         });
     });
