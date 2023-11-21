@@ -1,16 +1,16 @@
-import React from "react";
-import { getActors } from "../api/tmdb-api";
-import ActorListPageTemplate from '../components/templatePage/templateActorListPage';
-import { useQuery } from 'react-query';
+import React, {lazy, Suspense} from "react";
+import {getActors} from "../api/tmdb-api";
+const ActorListPageTemplate = lazy(() => import("../components/templatePage/templateActorListPage"));
+import {useQuery} from 'react-query';
 import Spinner from '../components/spinner';
 import AddToStar from "../components/cardIcons/addToStar";
 
 const ActorPage = (props) => {
 
-    const {  data, error, isLoading, isError }  = useQuery('actor', getActors)
+    const {data, error, isLoading, isError} = useQuery('actor', getActors)
 
     if (isLoading) {
-        return <Spinner />
+        return <Spinner/>
     }
 
     if (isError) {
@@ -19,12 +19,16 @@ const ActorPage = (props) => {
     const actors = data.results;
 
     return (
-        <ActorListPageTemplate
-            actors={actors}
-            action={(actor) => {
-                return <AddToStar actor={actor} />
-            }}
-        />
+        <>
+            <Suspense fallback={<h1>Building Actor List Page</h1>}>
+                <ActorListPageTemplate
+                    actors={actors}
+                    action={(actor) => {
+                        return <AddToStar actor={actor}/>
+                    }}
+                />
+            </Suspense>
+        </>
     )
 }
 
