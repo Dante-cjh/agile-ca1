@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmovies=self.webpackChunkmovies||[]).push([[907],{8907:function(n,e,i){i.r(e);var r=i(2791),t=i(1889),c=i(184),s=(0,r.lazy)((function(){return i.e(288).then(i.bind(i,4288))}));e.default=function(n){var e=n.actors,i=n.action;return e.map((function(n){return(0,c.jsx)(t.ZP,{item:!0,xs:12,sm:6,md:4,lg:3,xl:2,children:(0,c.jsx)(r.Suspense,{fallback:(0,c.jsx)("h1",{children:"Building Actor Card"}),children:(0,c.jsx)(s,{actor:n,action:i},n.id)})},n.id)}))}}}]);
+//# sourceMappingURL=907.9d78da64.chunk.js.map

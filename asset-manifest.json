@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.js": "/agile-ca1/static/js/main.bf371012.js",
+    "static/js/616.b5fd617a.chunk.js": "/agile-ca1/static/js/616.b5fd617a.chunk.js",
+    "static/js/895.e5d2c69d.chunk.js": "/agile-ca1/static/js/895.e5d2c69d.chunk.js",
+    "static/js/632.42818ab1.chunk.js": "/agile-ca1/static/js/632.42818ab1.chunk.js",
+    "static/js/907.9d78da64.chunk.js": "/agile-ca1/static/js/907.9d78da64.chunk.js",
+    "static/js/649.f6a75bbe.chunk.js": "/agile-ca1/static/js/649.f6a75bbe.chunk.js",
+    "static/js/288.bff365a3.chunk.js": "/agile-ca1/static/js/288.bff365a3.chunk.js",
+    "static/js/180.54b4e3a0.chunk.js": "/agile-ca1/static/js/180.54b4e3a0.chunk.js",
+    "static/media/pexels-dziana-hasanbekava-5480827.jpg": "/agile-ca1/static/media/pexels-dziana-hasanbekava-5480827.6123c500508cea5447e7.jpg",
+    "static/media/film-poster-placeholder.png": "/agile-ca1/static/media/film-poster-placeholder.9a8182eb4c8ae70fe602.png",
+    "index.html": "/agile-ca1/index.html",
+    "main.bf371012.js.map": "/agile-ca1/static/js/main.bf371012.js.map",
+    "616.b5fd617a.chunk.js.map": "/agile-ca1/static/js/616.b5fd617a.chunk.js.map",
+    "895.e5d2c69d.chunk.js.map": "/agile-ca1/static/js/895.e5d2c69d.chunk.js.map",
+    "632.42818ab1.chunk.js.map": "/agile-ca1/static/js/632.42818ab1.chunk.js.map",
+    "907.9d78da64.chunk.js.map": "/agile-ca1/static/js/907.9d78da64.chunk.js.map",
+    "649.f6a75bbe.chunk.js.map": "/agile-ca1/static/js/649.f6a75bbe.chunk.js.map",
+    "288.bff365a3.chunk.js.map": "/agile-ca1/static/js/288.bff365a3.chunk.js.map",
+    "180.54b4e3a0.chunk.js.map": "/agile-ca1/static/js/180.54b4e3a0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.bf371012.js"
+  ]
+}
