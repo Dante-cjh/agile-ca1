@@ -35,6 +35,8 @@ e2etest:
   # Node docker image with Cypress and Chrome pre-installed
   stage: test
   image: cypress/browsers:node16.13.0-chrome95-ff94
+  only:
+    - main
   script:
     - echo "Run tests in headless mode"
     - npx serve -s ./build  -l 3000  &
