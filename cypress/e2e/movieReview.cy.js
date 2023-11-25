@@ -24,7 +24,7 @@ describe("Movie Review tests", () => {
         before(() => {
             cy.request(
                 `https://api.themoviedb.org/3/movie/${
-                    movies[0].id
+                    movies[3].id
                 }?api_key=${Cypress.env("TMDB_KEY")}`
             )
                 .its("body")
@@ -33,7 +33,7 @@ describe("Movie Review tests", () => {
                 });
         });
         beforeEach(() => {
-            cy.visit(`/movies/${movies[0].id}`);
+            cy.visit(`/movies/${movies[3].id}`);
             cy.get("button").contains("Reviews").click();
             cy.get('table tbody tr').first().find('a').contains('Full Review').click();
         });
@@ -42,7 +42,7 @@ describe("Movie Review tests", () => {
             before(() => {
                 cy.request(
                     `https://api.themoviedb.org/3/movie/${
-                        movies[0].id
+                        movies[3].id
                     }/reviews?api_key=${Cypress.env("TMDB_KEY")}`
                 )
                     .its("body")

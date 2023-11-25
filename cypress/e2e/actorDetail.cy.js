@@ -23,7 +23,7 @@ describe("Actor Detail tests", () => {
         before(() => {
             cy.request(
                 `https://api.themoviedb.org/3/person/${
-                    actors[0].id
+                    actors[1].id
                 }?api_key=${Cypress.env("TMDB_KEY")}&language=en-US`
             )
                 .its("body")
@@ -32,7 +32,7 @@ describe("Actor Detail tests", () => {
                 });
             cy.request(
                 `https://api.themoviedb.org/3/person/${
-                    actors[0].id
+                    actors[1].id
                 }/movie_credits?api_key=${Cypress.env("TMDB_KEY")}`
             )
                 .its("body")
@@ -41,7 +41,7 @@ describe("Actor Detail tests", () => {
                 });
         });
         beforeEach(() => {
-            cy.visit(`/actors/${actors[0].id}`);
+            cy.visit(`/actors/${actors[1].id}`);
         });
         it(" displays the actor name, birthday and biography", () => {
             cy.get("h2").contains(actor.name);
