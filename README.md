@@ -1,68 +1,96 @@
 # Assignment 1 - Agile Software Practice.
 
-__Name:__ ....your name .....
+__Name:__ Jiahan Chen
 
 This repository contains the implementation of a React App, its associated Cypress tests and the GitLab CI pipeline.
 
 ## React App Features.
 
-[ Provide a bullet-point list of the __new features__ you added to the React Movies app, as well as any modifications to existing features).] e.g.
-
-+ Feature 1
-+ Feature 2
-+ Feature 3
-+ etc
-+ etc
++ Add the searching feature in the HomePage, which it can sort the current movie by popularity and vote in ASC and DESC
++ Add Day Trending feature which it shows today's most trending movies.
++ Add popular people page and it can link to the specific people details by clicking the people card. We can also filter the actor page by filtering the input name. It can also add the favorite icon to add the people into "Chase Star" page like "Favorite Movies".
++ Add the plus extension like the movie details contains to actors; actor details links to movies
++ Add the user login feature with Firebase which it contains email and password login and login by Google.
++ Add the pagination feature in the Home page and actor page.
 
 ## Automated Tests.
 
 ### Unique functionality testing (if relevant).
 
-[Briefly explain the parts of your app's  functionality that are unique and state the associated test file name.]
+**Upcoming Movie Page** - The user can find the day trending movies and can watch relevant movie details by clicking the movie card
 
-e.g.
++ cypress/e2e/upcoming.cy.js
 
-__Favourite Movie tagging__ - The user can tag movies as their favourite, and those selected are listed on a separate page.
+**Movie reviews** - The user can watch reviews of the movie and then click the specific review to see the detail
 
-+ cypress/e2e/favourites.cy.js
++ cypress/e2e/movieReview.cy.js
 
-__Feature X__ - The user can ......
+**Must Watch tagging** - The user can tag upcoming movies as their must watch, and those selected are listed on a separate page.
 
-+ cypress/e2e/featureX.cy.js
++ cypress/e2e/mustWatch.cy.js
+
+**Write movie reviews** - The user can write the movie reviews from the their favorite movies page.
+
++ cypress/e2e/writeReview.cy.js
+
+**Day Trending movies page** - The user can watch the day trending movies and can watch relevant movie details by clicking the movie card
+
+- cypress/e2e/movieTrending.cy.js
+
+**Actor page** - The user can watch the popular people
+
++ cypress/e2e/actorList.cy.js
+
+**Favorite Actor tagging** - The user can tag favorite actors as their chase star, and those selected are listed on a separate page.
+
++ cypress/e2e/actorFavorite.cy.js
+
+**Actor detail page** - The user can watch the actor details from the actor page and can watch the relevant movies which the actor has acted.
+
++ cypress/e2e/actorDetail.cy.js
+
+**Movie Credits page** - The user can redirect from the movie details to the actor detail which has acted this movie.
+
++ cypress/e2e/movieCredits.cy.js
+
+**Navigation site bar** - The user can navigate the movies and actor by the navigation and go back and go on the history.
+
++ cypress/e2e/navigation.cy.js
 
 ### Error/Exception testing (if relevant).
 
-[State the cases that demonstrate error and/or exception testing.]
-
-1. Display the Favourite Movies page when no movies have been tagged.
+1. Display the Must Watch Movies page when no movies have been tagged.
+1. Display the Favorite actor page when no actors have been tagged.
 1. Submitting a Movie Review form when the user's name is blank.
-1. Other case X
+1. Submitting a Movie Review form when the review is blank.
+1. Submitting a Movie Review form when the review words is short.
 
 ### Cypress Custom commands (if relevant).
 
-[ Specify the test file(s) that use a custom Cypress command(s) that you implemented.]
-
-e.g.
-+ cypress/e2e/filtering.cy.js
-+ cypress/e2e/favourites.cy.js
++ cypress/e2e/movieCredits.cy.js
++ cypress/e2e/actorDetail.cy.js
 
 ## Code Splitting.
 
-[Specify the pathname of each source code file that contains evidence of code splitting in your React app.]
-
-e.g.
 + src/index.js
-+ src/pages/favouriteMoviesPage.js
-+ src/components/movieCard/index.js
++ src/pages/homePage.js
++ src/pages/actorPage.js
++ src/components/templatePage/templateActorListPage/index.js
++ src/components/templatePage/templateMovieListPage/index.js
++ src/components/actor/actorList/index.js
++ src/components/movie/filterMoviesCard/index.js
++ src/components/movie/movieList/index.js
+
+![image-20231124234337555](imgs/image-20231124234337555.png)
 
 ## Pull Requests.
 
-[ Specify the URL of the GitHub repository that contains a record of the Pull Requests made during this assignment's code (source code or test code). If you used GitLab Merge Requests instead, then simply state this.]
+![image-20231124234831885](imgs/image-20231124234831885.png)
+
+![image-20231124234909329](imgs/image-20231124234909329.png)
 
 ## Independent learning (If relevant).
 
-[ Briefly explain the work you did to satisfy the requirements of the Outstanding grade category, and include proof (e.g. screenshots) of its success. Also, mention the files that contain evidence of this work.
+![image-20231124235014702](imgs/image-20231124235014702.png)
 
-
-State any other evidence of independent learning achieved while completing this assignment.
-
+![image-20231124235107592](imgs/image-20231124235107592.png)
