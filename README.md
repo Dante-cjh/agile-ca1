@@ -6,12 +6,9 @@ This repository contains the implementation of a React App, its associated Cypre
 
 ## React App Features.
 
-+ Add the searching feature in the HomePage, which it can sort the current movie by popularity and vote in ASC and DESC
 + Add Day Trending feature which it shows today's most trending movies.
 + Add popular people page and it can link to the specific people details by clicking the people card. We can also filter the actor page by filtering the input name. It can also add the favorite icon to add the people into "Chase Star" page like "Favorite Movies".
 + Add the plus extension like the movie details contains to actors; actor details links to movies
-+ Add the user login feature with Firebase which it contains email and password login and login by Google.
-+ Add the pagination feature in the Home page and actor page.
 
 ## Automated Tests.
 
