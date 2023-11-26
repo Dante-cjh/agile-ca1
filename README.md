@@ -81,16 +81,16 @@ This repository contains the implementation of a React App, its associated Cypre
 + src/components/movie/filterMoviesCard/index.js
 + src/components/movie/movieList/index.js
 
-![image-20231124234337555](imgs/image-20231124234337555.png)
+![image-20231124234337555](readme-imgs/image-20231124234337555.png)
 
 ## Pull Requests.
 
-![image-20231124234831885](imgs/image-20231124234831885.png)
+![image-20231124234831885](readme-imgs/image-20231124234831885.png)
 
-![image-20231124234909329](imgs/image-20231124234909329.png)
+![image-20231124234909329](readme-imgs/image-20231124234909329.png)
 
 ## Independent learning (If relevant).
 
-![image-20231124235014702](imgs/image-20231124235014702.png)
+![image-20231124235014702](readme-imgs/image-20231124235014702.png)
 
-![image-20231124235107592](imgs/image-20231124235107592.png)
+![image-20231124235107592](readme-imgs/image-20231124235107592.png)
